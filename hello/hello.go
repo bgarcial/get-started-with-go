@@ -27,7 +27,7 @@ func main() {
 	//Hello function.
 
 	// Assign both of the Hello return values, including the error, to variables
-	message, err := greetings.Hello("")
+	message, err := greetings.Hello("Bernardo")
 	/*
 	If an error was returned, print it to the console and
 	exit the program
