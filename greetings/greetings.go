@@ -2,13 +2,31 @@ package greetings
 // Declare a greetings package to collect related functions.
 
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
+// Hello returns a greeting for the named person and an error
+// if string sent is empty or ""
+func Hello(name string) (string, error) {
 
-// Hello returns a greeting for the named person
-func Hello(name string) string {
+	// If no name was give, return an error with a message
+	if name == "" {
+		return "", errors.New("empty name")
+		// https://golang.org/pkg/errors/#example_New
+	} 
+	// If a name was received
 	// Return a greeting that embeds the name in a message
 	message := fmt.Sprintf("Hi, %v. Welcome!", name)
-	return message
+	return message, nil
+	/*
+	nil (meaning no error) as a second value in the successful return. 
+	That way, the caller can see that the function succeeded. 
+	We have to include two elements in return
+	because Hello function take two parameters above
+	go functions can return multiple values 
+	https://golang.org/doc/effective_go.html#multiple-returns
+	*/
 }
 
 
