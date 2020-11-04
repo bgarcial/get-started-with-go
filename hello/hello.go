@@ -20,14 +20,22 @@ func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
 
+	// A slice of names
+	/*
+	Create a names variable as a slice type holding four names.
+	*/
+	names := []string{"Romeito", "Alegris", "Niche", "La Chamis"}
+
 
 	// Get a greetings message and print it.
 	// Calling function Hello on package greetings
 	//Get a greeting by calling the greetings package’s 
 	//Hello function.
 
-	// Assign both of the Hello return values, including the error, to variables
-	message, err := greetings.Hello("Bernardo")
+	// Assign both of the Hello return values, including the error, 
+	//to variables
+	// Pass the names variable as the argument to the Hellos function
+	message, err := greetings.Hellos(names)
 	/*
 	If an error was returned, print it to the console and
 	exit the program
