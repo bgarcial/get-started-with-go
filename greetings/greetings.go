@@ -22,6 +22,10 @@ func Hello(name string) (string, error) {
 	// Return a greeting that embeds the name in a message
 	// and the message is created using a random format
 	message := fmt.Sprintf(randomFormat(), name)
+	// Changing to no longer include the name to make tests break
+	//message := fmt.Sprint(randomFormat())
+
+	
 	return message, nil
 	/*
 		nil (meaning no error) as a second value in the successful return.
