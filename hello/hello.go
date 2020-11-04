@@ -1,13 +1,26 @@
+/*Declare a main package. 
+In Go, code executed as an application must go 
+in a main package.*/
 package main
 
-import "fmt"
-
-/* https://golang.org/doc/tutorial/getting-started#call  */
-import "rsc.io/quote"
+/*Importing 2 packages*/
+import (
+	"fmt"
+	"example.com/greetings"
+)
 
 func main() {
-    //fmt.Println("Hello, World")
-    // https://pkg.go.dev/rsc.io/quote
-    // https://github.com/rsc/quote/blob/v1.5.2/quote.go#L22
-    fmt.Println(quote.Go())
-}	
+	// Get a greetings message and print it.
+	// Calling function Hello on package greetings
+	//Get a greeting by calling the greetings package’s 
+	//Hello function.
+	message := greetings.Hello("Bernardo")
+	fmt.Println(message)
+}
+
+
+/*For this hello package is necessary to 
+create a module 
+> go mod init hello
+go: creating new go.mod: module hello
+*/

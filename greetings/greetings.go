@@ -17,10 +17,15 @@ func Hello(name string) string {
 /* https://golang.org/doc/tutorial/create-module
 This function takes a name parameter whose type is string, 
 and returns a string. 
+
+----
 In Go, a function whose name starts with a capital letter 
 can be called by a function not in the same package. 
 This is known in Go as an exported name.
 
+Read about Exported names
+https://tour.golang.org/basics/3
+-----
 Declare a message variable to hold your greeting.
 In Go, the := operator is a shortcut for declaring and 
 initializing a variable in one line (Go uses the value 
