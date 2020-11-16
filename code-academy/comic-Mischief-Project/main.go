@@ -19,10 +19,10 @@ func main() {
   grade = 6.5
 
   fmt.Println(
-    title, 
-    "written by", writer, 
-    "drawn by", artist, 
-    "Published by", publisher, 
+    title, "\n",
+    "Written by", writer, "\n",
+    "Drawn by", artist, "\n", 
+    "Published by", publisher,  "\n",
     year, pageNumber, "pages", grade,
   )
 
@@ -40,9 +40,9 @@ func main() {
 
   fmt.Println(
     title, 
-    "written by", writer, 
-    "drawn by", artist, 
-    "Published by", publisher, 
+    "written by", writer, "\n",
+    "drawn by", artist, "\n",
+    "Published by", publisher, "\n",
     year, pageNumber, "pages", grade,
   )
 }
