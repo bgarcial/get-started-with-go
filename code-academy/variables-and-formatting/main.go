@@ -47,5 +47,6 @@ func main() {
   // Finally, print them all out
   fmt.Println(emptyInt, emptyFloat, emptyString)
 
-
+  // Single-quotes are for a specific character (also called a rune), but string values need double-quotes.
+  // A number or string without a name is called a “literal” : 13.89
 }
